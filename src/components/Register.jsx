@@ -29,7 +29,7 @@ function Register() {
             return
         }
         try {
-            const response = await axios.post('https://connection-s6ix.onrender.com/api/user/register', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, {
                 name: user.fullname,
                 email: user.email,
                 username: user.username,
